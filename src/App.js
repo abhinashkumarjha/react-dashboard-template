@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Counter from "./components/Counter";
+import Dashboard from "./components/Dashboard";
 
 class App extends Component {
   render() {
     return (
-      <Counter />
+      <Dashboard />
     );
   }
 }

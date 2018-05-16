@@ -17,11 +17,6 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: "eslint-loader",
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
         loaders: "babel-loader",
         options: {
           presets: ["react", "stage-0", "es2015"],
