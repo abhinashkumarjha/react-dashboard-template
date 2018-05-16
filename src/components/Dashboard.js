@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Container ,Sidebar, Segment, Menu, Image, Icon, Header } from 'semantic-ui-react'
 import DashboardContainer from './DashboardContainer'
 
+
+
+
 class Dashboard extends Component {
   state = { visible: false }
 
@@ -17,10 +20,9 @@ class Dashboard extends Component {
         <a className="item"> Contact us</a>
       </div>
         <Sidebar.Pushable as={Segment}>
-          <Sidebar as={Menu} animation='slide out' width='thin' visible={visible} icon='labeled' vertical inverted>
+          <Sidebar as={Menu} animation='slide out' width='thin' visible={visible} icon='labeled' vertical>
             <Menu.Item name='home'>
-              <Icon name='home' />
-              Home
+              <Icon name='home' /> Home
             </Menu.Item>
             <Menu.Item name='gamepad'>
               <Icon name='gamepad' />

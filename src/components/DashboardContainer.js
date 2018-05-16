@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 import { Card, Icon,  Image } from 'semantic-ui-react'
+import DatePicker from './DatePicker'
+import TotalSales from './TotalSales'
+import OverView from './OverView'
+import Performance from './Performance'
+import Customers from './Customers'
+import Promotions from './Promotions'
+import UniqueCustomerAdded from './UniqueCustomerAdded'
 
 class DashboardContainer extends Component {
 
@@ -8,38 +15,45 @@ class DashboardContainer extends Component {
       <div className="card-container">
         <Card>
           <Card.Content>
-            <Card.Header>Top Menu</Card.Header>
+            <DatePicker/>
           </Card.Content>
         </Card>
         <Card fluid>
           <Card.Content>
-            <Card.Header>Lallantop menu</Card.Header>
+            <OverView />
           </Card.Content>
         </Card>
-        <Card fluid>
-          <Image src='http://www.robocup2016.org/media/leagues/eindhoven/albert-van-bremen/robocup-soccer-small-size_Albert-van-Breemen-2_R220X0.jpg' />
+        <Card>
+        <Card.Header><h4>Total Sales</h4></Card.Header>
+          <Card.Content>
+            <TotalSales />
+          </Card.Content>
         </Card>
         <Card.Group centered>
           <Card>
-            <Image src='http://www.robocup2016.org/media/leagues/eindhoven/albert-van-bremen/robocup-soccer-small-size_Albert-van-Breemen-2_R220X0.jpg' />
+            <Card.Header> Performance </Card.Header>
+            <Card.Content>
+              <Performance />
+            </Card.Content>
           </Card>
           <Card>
-            <Image src='http://www.robocup2016.org/media/leagues/eindhoven/albert-van-bremen/robocup-soccer-small-size_Albert-van-Breemen-2_R220X0.jpg' />
+            <Card.Header> Customers </Card.Header>
+            <Card.Content>
+              <Customers />
+            </Card.Content>
           </Card>
         </Card.Group>
         <Card.Group centered>
           <Card>
+            <Card.Header>Promotions</Card.Header>
             <Card.Content>
-              <Card.Header>Daniel</Card.Header>
-              <Card.Meta>Joined in 2016</Card.Meta>
-              <Card.Description>Daniel is a comedian living in Nashville.</Card.Description>
+              <Promotions />
             </Card.Content>
           </Card>
           <Card>
+            <Card.Header>Unique Customer Added </Card.Header>
             <Card.Content>
-              <Card.Header>Daniel</Card.Header>
-              <Card.Meta>Joined in 2016</Card.Meta>
-              <Card.Description>Daniel is a comedian living in Nashville.</Card.Description>
+              <UniqueCustomerAdded />
             </Card.Content>
           </Card>
         </Card.Group>
