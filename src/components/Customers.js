@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import DonutChart from './DonutChart'
+
 
 export default function Customers(){
   return(
-    <h1>Donut Chart Container</h1>
+    <DonutChart/>
   )
 }

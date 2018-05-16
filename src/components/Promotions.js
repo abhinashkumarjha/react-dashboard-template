@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 
 export default function Promotions(){
   return(
-    <h1>Donut Chart Container</h1>
+    <div>
+      <div className="Infobox-perfromance">
+        <h3>Hola</h3>
+      </div>
+      <div className="Infobox-perfromance">
+        <h3> Hey You</h3>
+      </div>
+    </div>
   )
 }

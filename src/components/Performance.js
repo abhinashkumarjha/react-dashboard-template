@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PaginationTable from './PaginationTable';
 
 export default function Performance(){
   return(
-    <h1>Donut Chart Container</h1>
+    <PaginationTable />
   )
 }

@@ -23,37 +23,47 @@ class DashboardContainer extends Component {
             <OverView />
           </Card.Content>
         </Card>
-        <Card>
-        <Card.Header><h4>Total Sales</h4></Card.Header>
+        <Card fluid>
           <Card.Content>
-            <TotalSales />
+          <Card.Header><h4>Total Sales</h4></Card.Header>
+            <Card.Description>
+              <TotalSales />
+            </Card.Description>
           </Card.Content>
         </Card>
         <Card.Group centered>
           <Card>
-            <Card.Header> Performance </Card.Header>
             <Card.Content>
-              <Performance />
+              <Card.Header> Performance </Card.Header>
+              <Card.Description>
+                <Performance />
+              </Card.Description>
             </Card.Content>
           </Card>
           <Card>
-            <Card.Header> Customers </Card.Header>
             <Card.Content>
-              <Customers />
+              <Card.Header> Customers </Card.Header>
+              <Card.Description>
+                <Customers />
+              </Card.Description>
             </Card.Content>
           </Card>
         </Card.Group>
         <Card.Group centered>
           <Card>
-            <Card.Header>Promotions</Card.Header>
             <Card.Content>
-              <Promotions />
+              <Card.Header>Promotions</Card.Header>
+              <Card.Description>
+                <Promotions />
+              </Card.Description>
             </Card.Content>
           </Card>
           <Card>
             <Card.Header>Unique Customer Added </Card.Header>
             <Card.Content>
-              <UniqueCustomerAdded />
+              <Card.Description>
+                <UniqueCustomerAdded />
+              </Card.Description>
             </Card.Content>
           </Card>
         </Card.Group>

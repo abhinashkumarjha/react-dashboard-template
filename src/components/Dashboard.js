@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Container ,Sidebar, Segment, Menu, Image, Icon, Header } from 'semantic-ui-react'
-import DashboardContainer from './DashboardContainer'
+import React, { Component } from 'react';
+import { Container ,Sidebar, Segment, Menu, Image, Icon, Header } from 'semantic-ui-react';
+import DashboardContainer from './DashboardContainer';
 
 
 

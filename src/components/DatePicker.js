@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, DropDown, Header, Container } from 'semantic-ui-react'
+import { Icon, Dropdown, Header, Container } from 'semantic-ui-react'
 
 
   const options=[
@@ -34,8 +34,8 @@ import { Icon, DropDown, Header, Container } from 'semantic-ui-react'
       <Header as="h4">
           <Icon name="calendar alternate outline" />
           <Header.Content>
-            <span> Text 1</span>
-            <span> Text 2 </span>
+          <Dropdown inline defaultValue={ options[1].value } options={options}/>
+          <Dropdown inline defaultValue={  menu[1].value }options={menu}/>
           </Header.Content>
       </Header>
       </Container>
