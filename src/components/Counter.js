@@ -19,10 +19,6 @@ import { connect } from "react-redux";
       <div className="counter">
         <div>{count}</div>
         <Controls />
-        <hr />
-        <span>
-          <a href='https://github.com/Gigacore/React-Redux-Starter'>Fork it on Github</a>
-        </span>
       </div>
     );
   }
