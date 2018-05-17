@@ -1,45 +1,46 @@
 import React, { Component } from 'react';
 import { Container ,Sidebar, Segment, Menu, Image, Icon, Header } from 'semantic-ui-react';
-import DashboardContainer from './../containers/DashboardContainer';
-
-
+import DashboardSalesContainer from './../containers/DashboardSalesContainer';
+import { Route, Link } from 'react-router-dom';
+import { Operation, Vendor, Accounting  } from './pages';
 
 
 class Dashboard extends Component {
-  state = { visible: true }
-
-  toggleVisibility = () => this.setState({ visible: this.state.visible })
 
   render() {
-    const { visible } = this.state
     return (
-      <div className="Container">
-      <div className="ui secondary menu" id="menu">
-        <a className="active item" onClick={this.toggleVisibility}><Icon name='bars' /> Menu </a>
-        <a className="item" >About us</a>
-        <a className="item"> Contact us</a>
-      </div>
         <Sidebar.Pushable as={Segment}>
-          <Sidebar as={Menu} animation='slide out' width='thin' visible={visible} icon='labeled' vertical>
-            <Menu.Item name='home'>
-              <Icon name='home' /> Home
+          <Sidebar as={Menu} animation='slide out' width='thin' visible={true} icon='labeled' vertical inverted>
+            <Menu.Item name='sales' active={true}>
+              <Link to="/sales">
+                <Icon name='sales' /> Sales
+              </Link>
             </Menu.Item>
-            <Menu.Item name='gamepad'>
-              <Icon name='gamepad' />
-              Games
+            <Menu.Item name='operations'>
+              <Link to="/operations">
+                <Icon name='operations' />Operation
+              </Link>
             </Menu.Item>
-            <Menu.Item name='camera'>
-              <Icon name='camera' />
-              Channels
+            <Menu.Item name='vendor'>
+              <Link to="/vendor">
+                <Icon name='camera' />Vendor
+              </Link>
+            </Menu.Item>
+            <Menu.Item name='accounting'>
+              <Link to="/accounting">
+                <Icon name='camera' />Accounting
+              </Link>
             </Menu.Item>
           </Sidebar>
           <Sidebar.Pusher>
             <Segment basic>
-              <DashboardContainer />
+            <Route path='/sales' component={DashboardSalesContainer}></Route>
+            <Route path='/operations' component={Operation}></Route>
+            <Route path='/vendor' component={Vendor}></Route>
+            <Route path='/accounting' component={Accounting}></Route>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
-      </div>
     )
   }
 }

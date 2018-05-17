@@ -10,7 +10,7 @@ import UniqueCustomerAdded from './../components/UniqueCustomerAdded';
 import { connect } from 'react-redux';
 
 
-class DashboardContainer extends Component {
+class DashboardSalesContainer extends Component {
   render(){
     return(
       <div className="card-container">
@@ -80,4 +80,4 @@ function mapStateToProps(state){
   };
 }
 
-export default connect(mapStateToProps)(DashboardContainer);
+export default connect(mapStateToProps)(DashboardSalesContainer);
