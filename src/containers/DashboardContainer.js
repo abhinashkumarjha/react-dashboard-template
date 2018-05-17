@@ -1,15 +1,16 @@
-import React, { Component } from 'react'
-import { Card, Icon,  Image } from 'semantic-ui-react'
-import DatePicker from './DatePicker'
-import TotalSales from './TotalSales'
-import OverView from './OverView'
-import Performance from './Performance'
-import Customers from './Customers'
-import Promotions from './Promotions'
-import UniqueCustomerAdded from './UniqueCustomerAdded'
+import React, { Component } from 'react';
+import { Card, Icon } from 'semantic-ui-react';
+import DatePicker from './../components/DatePicker';
+import TotalSales from './../components/TotalSales';
+import OverView from './../components/OverView';
+import Performance from './../components/Performance';
+import Customers from './../components/Customers';
+import Promotions from './../components/Promotions';
+import UniqueCustomerAdded from './../components/UniqueCustomerAdded';
+import { connect } from 'react-redux';
+
 
 class DashboardContainer extends Component {
-
   render(){
     return(
       <div className="card-container">
@@ -27,7 +28,7 @@ class DashboardContainer extends Component {
           <Card.Content>
           <Card.Header><h4>Total Sales</h4></Card.Header>
             <Card.Description>
-              <TotalSales />
+              <TotalSales totalSalesData={this.props.dashboardData.totalSalesData}/>
             </Card.Description>
           </Card.Content>
         </Card>
@@ -36,7 +37,7 @@ class DashboardContainer extends Component {
             <Card.Content>
               <Card.Header> Performance </Card.Header>
               <Card.Description>
-                <Performance />
+                <Performance Tabledata={this.props.dashboardData.performanceData}/>
               </Card.Description>
             </Card.Content>
           </Card>
@@ -44,7 +45,7 @@ class DashboardContainer extends Component {
             <Card.Content>
               <Card.Header> Customers </Card.Header>
               <Card.Description>
-                <Customers />
+                <Customers donutChartData={this.props.dashboardData.donutChartData}/>
               </Card.Description>
             </Card.Content>
           </Card>
@@ -54,15 +55,15 @@ class DashboardContainer extends Component {
             <Card.Content>
               <Card.Header>Promotions</Card.Header>
               <Card.Description>
-                <Promotions />
+                <Promotions promotionData={this.props.dashboardData.promotionData}/>
               </Card.Description>
             </Card.Content>
           </Card>
           <Card>
-            <Card.Header>Unique Customer Added </Card.Header>
             <Card.Content>
+              <Card.Header>Unique Customer Added </Card.Header>
               <Card.Description>
-                <UniqueCustomerAdded />
+                <UniqueCustomerAdded uniqueCustomerAdded={this.props.dashboardData.uniqueCustomerAdded}/>
               </Card.Description>
             </Card.Content>
           </Card>
@@ -73,4 +74,10 @@ class DashboardContainer extends Component {
 
 }
 
-export default DashboardContainer
+function mapStateToProps(state){
+  return {
+    dashboardData:state.dashboard
+  };
+}
+
+export default connect(mapStateToProps)(DashboardContainer);

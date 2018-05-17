@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PaginationTable from './PaginationTable';
 
-export default function Performance(){
+export default function Performance(props){
   return(
-    <PaginationTable />
+    <PaginationTable Tabledata={props.Tabledata}/>
   )
 }

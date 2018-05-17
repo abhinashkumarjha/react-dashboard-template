@@ -14,20 +14,6 @@ import { Icon, Dropdown, Header, Container } from 'semantic-ui-react'
     { key: 3, text: '2002-2003', value: 3 }
    ]
 
-/*
-  const DatePicker = () =>{
-    return(
-      <Header as="h4">
-          <Icon name="calendar alternate outline" />
-          <Header.Content>
-            <DropDown inline defaultValue={ options[1].value } options={options}/>
-            <DropDown inline defaultValue={  menu[1].value }options={menu}/>
-          </Header.Content>
-      </Header>
-    )
-  }
-
-*/
   const DatePicker = () =>{
     return(
       <Container>

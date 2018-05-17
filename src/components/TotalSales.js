@@ -1,57 +1,30 @@
 import React, { Component } from 'react';
-import { VictoryChart, VictoryScatter, VictoryStack, VictoryPortal, VictoryArea, VictoryGroup } from 'victory';
+import { VictoryChart, VictoryStack, VictoryArea, VictoryVoronoiContainer, VictoryTooltip } from 'victory';
 
 
-export default function TotalSales(){
+export default function TotalSales(props){
   return(
       <div>
-        <VictoryChart scale={{ x: "time" }} width={400} height={200}>
+        <VictoryChart scale={{ x: "time" }} width={400} height={200} containerComponent={
+          <VictoryVoronoiContainer
+            voronoiDimension="x"
+            labels={(d) => `y: ${d.y}`}
+            labelComponent={
+              <VictoryTooltip
+                cornerRadius={0}
+                flyoutStyle={{ fill: "white" }}
+              />}
+          />}>
           <VictoryStack colorScale="cool">
-            <VictoryGroup
-              data={[
-                { x: new Date(1986, 1, 1), y: 2 },
-                { x: new Date(1996, 1, 1), y: 3 },
-                { x: new Date(2006, 1, 1), y: 5 },
-                { x: new Date(2016, 1, 1), y: 4 }
-              ]}
-            >
-              <VictoryArea/>
-              <VictoryPortal>
-                <VictoryScatter
-                  style={{ data: { fill: "black" } }}
-                />
-              </VictoryPortal>
-            </VictoryGroup>
-            <VictoryGroup
-              data={[
-                { x: new Date(1986, 1, 1), y: 4 },
-                { x: new Date(1996, 1, 1), y: 3 },
-                { x: new Date(2006, 1, 1), y: 2 },
-                { x: new Date(2016, 1, 1), y: 5 }
-              ]}
-            >
-              <VictoryArea/>
-             <VictoryPortal>
-                <VictoryScatter
-                  style={{ data: { fill: "black" } }}
-                />
-              </VictoryPortal>
-            </VictoryGroup>
-            <VictoryGroup
-              data={[
-                { x: new Date(1986, 1, 1), y: 3 },
-                { x: new Date(1996, 1, 1), y: 1 },
-                { x: new Date(2006, 1, 1), y: 4 },
-                { x: new Date(2016, 1, 1), y: 2 }
-              ]}
-            >
-              <VictoryArea/>
-              <VictoryPortal>
-                <VictoryScatter
-                  style={{ data: { fill: "black" } }}
-                />
-              </VictoryPortal>
-            </VictoryGroup>
+            <VictoryArea
+              data={props.totalSalesData[0]}
+            />
+            <VictoryArea
+              data={props.totalSalesData[1]}
+            />
+            <VictoryArea
+              data={props.totalSalesData[2]}
+            />
           </VictoryStack>
         </VictoryChart>
       </div>

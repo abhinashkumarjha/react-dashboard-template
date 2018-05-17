@@ -4,7 +4,6 @@ html {
 
 body {
   height: 100%;
-  background: blue;
 }
 
 .pusher {
@@ -20,4 +19,8 @@ body {
 .container{
   height: 100%;
   width: 100%;
+}
+.ui.cards{
+  min-width: 300px;
+  width: 100%!important;
 }

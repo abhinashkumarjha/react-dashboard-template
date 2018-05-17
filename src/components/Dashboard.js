@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Container ,Sidebar, Segment, Menu, Image, Icon, Header } from 'semantic-ui-react';
-import DashboardContainer from './DashboardContainer';
+import DashboardContainer from './../containers/DashboardContainer';
 
 
 
 
 class Dashboard extends Component {
-  state = { visible: false }
+  state = { visible: true }
 
-  toggleVisibility = () => this.setState({ visible: !this.state.visible })
+  toggleVisibility = () => this.setState({ visible: this.state.visible })
 
   render() {
     const { visible } = this.state

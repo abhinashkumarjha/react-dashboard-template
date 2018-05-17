@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export default function Promotions(){
+export default function Promotions(props){
   return(
     <div>
       <div className="Infobox-perfromance">
-        <h3>Hola</h3>
+        <h3>{props.promotionData.withPromotions}</h3>
       </div>
       <div className="Infobox-perfromance">
-        <h3> Hey You</h3>
+        <h3>{props.promotionData.withoutPromotions}</h3>
       </div>
     </div>
   )

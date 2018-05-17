@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import DonutChart from './DonutChart'
 
 
-export default function Customers(){
+export default function Customers(props){
   return(
-    <DonutChart/>
+    <DonutChart donutChartData={props.donutChartData}/>
   )
 }
