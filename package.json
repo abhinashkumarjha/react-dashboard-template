@@ -44,8 +44,8 @@
   "scripts": {
     "server":"node server.js",
     "start":"npm run build && npm run server",
-    "start:dev": "webpack-dev-server",
-    "build": "webpack",
+    "start:dev": "npm install node-sass && webpack-dev-server",
+    "build": "npm install node-sass && webpack",
     "watch": "webpack --watch",
     "lint": "./node_modules/.bin/eslint ./src"
   },
