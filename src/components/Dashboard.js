@@ -43,7 +43,6 @@ class Dashboard extends Component {
             <Route path='/operations' component={Operation}></Route>
             <Route path='/vendor' component={Vendor}></Route>
             <Route path='/accounting' component={Accounting}></Route>
-            <Route path='/' component={DashboardSalesContainer}></Route>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
