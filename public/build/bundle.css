@@ -5,18 +5,71 @@ body {
   height: 100%; }
 
 .pusher {
-  height: 100%;
   margin-top: 0px;
-  height: 100%; }
+  min-height: 100%;
+  background-color: #eee !important; }
+
+svg {
+  max-height: 300px; }
 
 #root {
   height: 100%;
   width: 100%; }
 
+#root > div {
+  background-color: #1b1c1d; }
+
+text {
+  font-size: 10px !important; }
+
+.button-container-overview {
+  float: right;
+  padding: 10px; }
+
+.column > button {
+  float: right;
+  color: black; }
+
+.card-header-custom {
+  padding: 2px !important; }
+
 .container {
   height: 100%;
   width: 100%; }
 
-.ui.cards {
-  min-width: 300px;
-  width: 100% !important; }
+.card {
+  width: auto; }
+
+.ui.cards > .card {
+  width: 100%;
+  max-width: 500px; }
+
+table {
+  width: 100%; }
+
+ul {
+  list-style-type: none;
+  background: none;
+  border: none;
+  box-shadow: 0px;
+  padding: 0px; }
+
+li button {
+  background: white;
+  border: 1px solid #ddd;
+  height: 100%;
+  /* padding: 20px; */
+  padding: 10px;
+  width: 50px;
+  cursor: pointer; }
+
+.sidebar-container {
+  height: 100%;
+  width: 150px;
+  float: left; }
+
+.Infobox-perfromance {
+  font-weight: bold;
+  color: #3ac0ff;
+  margin: auto;
+  padding: 20px; }

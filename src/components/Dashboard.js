@@ -12,24 +12,27 @@ class Dashboard extends Component {
         <Sidebar.Pushable as={Segment}>
         <div className="sidebar-container">
           <Sidebar as={Menu} animation='slide out' width='thin' visible={true} icon='labeled' vertical inverted>
+            <Menu.Item name='logo' active={false}>
+              <img src="https://www.vendour.in/wp-content/uploads/2017/11/logo.png" width="100%" height="auto"/>
+            </Menu.Item>
             <Menu.Item name='sales' active={true}>
               <Link to="/sales">
-                <Icon name='sales' /> Sales
+                <Icon name='yelp' /> Sales
               </Link>
             </Menu.Item>
             <Menu.Item name='operations'>
               <Link to="/operations">
-                <Icon name='operations' />Operation
+                <Icon name='truck' />Operation
               </Link>
             </Menu.Item>
             <Menu.Item name='vendor'>
               <Link to="/vendor">
-                <Icon name='camera' />Vendor
+                <Icon name='shopping bag' />Vendor
               </Link>
             </Menu.Item>
             <Menu.Item name='accounting'>
               <Link to="/accounting">
-                <Icon name='camera' />Accounting
+                <Icon name='book' />Accounting
               </Link>
             </Menu.Item>
           </Sidebar>

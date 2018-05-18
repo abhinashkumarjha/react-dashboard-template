@@ -22,7 +22,7 @@ export default function Overview(){
         <Feed>
           <Feed.Event>
             <Feed.Label>
-              <Icon name='man' />
+              <Icon name='external' />
             </Feed.Label>
             <Feed.Content>
               <Feed.Summary>
