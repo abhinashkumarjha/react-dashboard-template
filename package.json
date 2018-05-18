@@ -4,6 +4,7 @@
   "description": "A react redux based Data Dashboard template",
   "watch": true,
   "dependencies": {
+    "express": "^4.16.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -38,6 +39,8 @@
     "webpack-dev-server": "^2.11.2"
   },
   "scripts": {
+    "server":"node server.js",
+    "start":"npm run build & npm run server",
     "start:dev": "webpack-dev-server",
     "build": "webpack",
     "watch": "webpack --watch",
