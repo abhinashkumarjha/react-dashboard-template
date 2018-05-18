@@ -5,7 +5,7 @@ import { VictoryChart, VictoryStack, VictoryArea, VictoryVoronoiContainer, Victo
 export default function TotalSales(props){
   return(
       <div>
-        <VictoryChart scale={{ x: "time" }} width={400} height={200} containerComponent={
+        <VictoryChart scale={{ x: "time" }} width={600} height={200} containerComponent={
           <VictoryVoronoiContainer
             voronoiDimension="x"
             labels={(d) => `y: ${d.y}`}

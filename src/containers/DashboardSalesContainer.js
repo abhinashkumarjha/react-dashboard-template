@@ -20,13 +20,47 @@ class DashboardSalesContainer extends Component {
           </Card.Content>
         </Card>
         <Card fluid>
+          <Card.Header>
+            <div className="card-header-custom">
+              <div className="button-container-overview">
+                <button class="ui blue inverted active button right">
+                  Total
+                </button>
+                <button class="ui blue inverted button right">
+                  Cash/Cashless
+                </button>
+              </div>
+              <div className="button-container-overview">
+                <button class="ui blue inverted active button right">
+                  Value
+                </button>
+                <button class="ui blue inverted button right">
+                  Growth
+                </button>
+              </div>
+            </div>
+          </Card.Header>
           <Card.Content>
             <OverView />
           </Card.Content>
         </Card>
         <Card fluid>
           <Card.Content>
-          <Card.Header><h4>Total Sales</h4></Card.Header>
+          <Card.Header>
+            <div className="ui grid card-header-custom">
+              <div className="column nine wide left">
+                Total Sales
+              </div>
+              <div className="column seven wide right">
+                <button class="ui blue inverted active button right">
+                  Value
+                </button>
+                <button class="ui blue inverted button right">
+                  Volume
+                </button>
+              </div>
+            </div>
+          </Card.Header>
             <Card.Description>
               <TotalSales totalSalesData={this.props.dashboardData.totalSalesData}/>
             </Card.Description>
@@ -35,7 +69,21 @@ class DashboardSalesContainer extends Component {
         <Card.Group centered>
           <Card>
             <Card.Content>
-              <Card.Header> Performance </Card.Header>
+              <Card.Header>
+                <div className="ui grid card-header-custom">
+                  <div className="column nine wide left">
+                    Performance
+                  </div>
+                  <div className="column seven wide right">
+                    <button class="ui blue inverted active button right">
+                      Value
+                    </button>
+                    <button class="ui blue inverted button right">
+                      Volume
+                    </button>
+                  </div>
+                </div>
+              </Card.Header>
               <Card.Description>
                 <Performance Tabledata={this.props.dashboardData.performanceData}/>
               </Card.Description>
@@ -53,7 +101,21 @@ class DashboardSalesContainer extends Component {
         <Card.Group centered>
           <Card>
             <Card.Content>
-              <Card.Header>Promotions</Card.Header>
+              <Card.Header>
+                <div className="ui grid card-header-custom">
+                  <div className="column nine wide left">
+                    Promotions
+                  </div>
+                  <div className="column seven wide right">
+                    <button class="ui blue inverted active button right">
+                      Value
+                    </button>
+                    <button class="ui blue inverted button right">
+                      Volume
+                    </button>
+                  </div>
+                </div>
+              </Card.Header>
               <Card.Description>
                 <Promotions promotionData={this.props.dashboardData.promotionData}/>
               </Card.Description>

@@ -10,6 +10,7 @@ class Dashboard extends Component {
   render() {
     return (
         <Sidebar.Pushable as={Segment}>
+        <div className="sidebar-container">
           <Sidebar as={Menu} animation='slide out' width='thin' visible={true} icon='labeled' vertical inverted>
             <Menu.Item name='sales' active={true}>
               <Link to="/sales">
@@ -32,12 +33,14 @@ class Dashboard extends Component {
               </Link>
             </Menu.Item>
           </Sidebar>
+          </div>
           <Sidebar.Pusher>
             <Segment basic>
             <Route path='/sales' component={DashboardSalesContainer}></Route>
             <Route path='/operations' component={Operation}></Route>
             <Route path='/vendor' component={Vendor}></Route>
             <Route path='/accounting' component={Accounting}></Route>
+            <Route path='/' component={DashboardSalesContainer}></Route>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
